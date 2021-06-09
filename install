@@ -26,6 +26,8 @@ ssh-keygen -t rsa
 kops create secret --name kubernetes.wahiddin.my.id sshpublickey admin -i ~/.ssh/id_rsa.pub
 ========edit cluster============
 kops edit cluster --name(..)
+========buat ulang cluster error unauthorize=====
+kops export kubecfg --admin 
 ========build cluster==========
 kops update cluster (..) --yes --admin
 ======pointing ip(memasukan ip domain api)===========
