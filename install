@@ -34,9 +34,9 @@ sudo vim /etc/hosts
 kops validate cluster
 =========download akses dashboard========
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.2.0/aio/deploy/recommended.yaml
-==========kubectl port-forward==========
+==========kubectl port-forward kedalam local==========
 kubectl port-forward -n kubernetes-dashboard service/kubernetes-dashboard 8080:443
-scp -i wahidin-key.pem ubuntu@(server):~/.kube/config ~/.kube/
+scp -i wahidin-key.pem ubuntu@(server):~/.kube/config ~/.kube/ 
 ========akses ke dashboard=======
 https://localhost:8080
 ========kubernetes dashboard access=========
