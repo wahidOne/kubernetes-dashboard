@@ -23,6 +23,7 @@ export KOPS_STATE_STORE=s3://(....)
 kops create cluster --node-count=3 --node-size=t2.micro --master-size=t2.micro --zones=(...) --name kubernetes.(...)
 =======optional apabila error===========
 ssh-keygen -t rsa
+kops create secret --name kubernetes.wahiddin.my.id sshpublickey admin -i ~/.ssh/id_rsa.pub
 ========edit cluster============
 kops edit cluster --name(..)
 ========build cluster==========
